@@ -1,0 +1,41 @@
+name:               haka
+version:            0.1.0.0
+description:        https://github.com/metaml/bird-tree#readme
+homepage:           https://github.com/metaml/bird-tree#readme
+bug-reports:        https://github.com/metaml/bird-tree/issues
+author:             Michael Lee
+maintainer:         metaml@gmail.com
+copyright:          Copyright © 2017 Michael Lee. All rights reserved.
+license:            BSD3
+license-file:       LICENSE
+extra-source-files:
+build-type:         Simple
+cabal-version:      >= 1.10
+
+source-repository head
+  type:             git
+  location:         https://github.com/metaml/bird-tree
+
+library
+  hs-source-dirs:   src
+  default-language: Haskell2010
+  exposed-modules:  BirdTree
+  ghc-options:      -fprint-potential-instances
+  build-depends:    base >=4.7 && <5
+
+executable bird-tree
+  hs-source-dirs:   app
+  main-is:          bird-tree.hs
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N
+  default-language: Haskell2010
+  build-depends:    base >=4.7 && <5
+                  , haka
+
+test-suite bird-tree-test
+  type:             exitcode-stdio-1.0
+  hs-source-dirs:   test
+  main-is:          Spec.hs
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N
+  default-language: Haskell2010
+  build-depends:    base >=4.7 && <5
+                  , bird-tree

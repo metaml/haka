@@ -1,0 +1,9 @@
+resolver: nightly-2018-05-02
+packages:
+  - .
+flags: {}
+extra-package-dbs: []
+allow-newer: true
+extra-deps: []
+extra-include-dirs: []
+extra-lib-dirs: []
