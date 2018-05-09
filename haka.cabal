@@ -20,8 +20,10 @@ library
   hs-source-dirs:   src
   default-language: Haskell2010
   exposed-modules:  BirdTree
+                  , Fix
   ghc-options:      -fprint-potential-instances
   build-depends:    base >=4.7 && <5
+                  , data-fix
 
 executable bird-tree
   hs-source-dirs:   app
