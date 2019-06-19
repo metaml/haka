@@ -38,7 +38,7 @@ GHC_VER = $(shell stack ghc -- --version | awk '{print $$NF}')
 bin: ## make "bin" link
 	ln -fs .stack-work/install/x86_64-${OS}/${LTS}/${GHC_VER}/bin
 
-ghci: ## ghci
+repl: ## ghci
 	stack exec ghci -- -fobject-code
 
 run-%: ## make run-<cmd>, e.g.: make run-ghci

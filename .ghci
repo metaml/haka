@@ -1,0 +1,6 @@
+:set -XFlexibleContexts
+:set -XFlexibleInstances
+:set -XMultiParamTypeClasses
+:set -XScopedTypeVariables
+:set -XTypeApplications
+:set -XTypeOperators
